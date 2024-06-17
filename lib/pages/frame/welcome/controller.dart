@@ -1,3 +1,5 @@
+import 'package:chatty/common/routes/routes.dart';
+
 import 'state.dart';
 import 'package:get/get.dart';
 
@@ -10,6 +12,7 @@ class WelcomeController extends GetxController{
   @override
   void onReady(){
     super.onReady();
-    print(" WelcomeController ");
+    Future.delayed(
+        const Duration(seconds: 2), () => Get.offAllNamed(AppRoutes.Message));
   }
 }
